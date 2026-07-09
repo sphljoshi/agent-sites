@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Russell Armine | Personal, Commercial &amp; Life Insurance in Toms River, NJ</title>
+    <meta
+      name="description"
+      content="Meet Russell Armine — owner of Armine Insurance Agency, LLC, an independent agent with 35 years in insurance, helping families and businesses across FL, NC, NJ and NY find coverage that makes sense."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Russell Armine",
+      "jobTitle": "Owner & Licensed Insurance Agent",
+      "description": "Owner of Armine Insurance Agency, LLC with 35 years in the insurance industry, helping individuals, families and businesses find personal, commercial and life coverage across Florida, North Carolina, New Jersey and New York since 2007.",
+      "telephone": "+18009442592",
+      "email": "raminsurance@aol.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2932 Crestview Lane",
+        "addressLocality": "Toms River",
+        "addressRegion": "NJ",
+        "postalCode": "08755",
+        "addressCountry": "US"
+      },
+      "knowsAbout": ["Personal Insurance", "Commercial Insurance", "Life Insurance", "Homeowners Insurance", "Auto Insurance", "General Liability", "Business Owners Policy", "Workers' Compensation", "Term Life", "Whole Life", "Universal Life"],
+      "knowsLanguage": ["English"],
+      "worksFor": { "@type": "Organization", "name": "Armine Insurance Agency, LLC" }
+    }
+    </script>
+  </head>
+  <body>
+    <nav class="nav" id="nav"></nav>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+
+    <section class="about-hero">
+      <div class="wrap">
+        <span class="about-hero__label">About Us</span>
+        <h1 class="about-hero__title">An <em>independent agency</em> committed to <em>straightforward, dependable</em> coverage built around you.</h1>
+        <div class="about-hero__row">
+          <div class="about-hero__main">
+            <p class="about-hero__pre"><em>Meet</em></p>
+            <h2 class="about-hero__name">Russell Armine</h2>
+            <p class="about-hero__role">Owner &amp; Licensed Insurance Agent</p>
+            <div class="about-hero__bio">
+              <p>At Armine Insurance Agency, LLC, Russell helps individuals, families and businesses find coverage that actually makes sense — without the confusion or pressure. With 35 years in the industry and an independent, service-first approach, he shops trusted carriers for clients across FL, NC, NJ and NY, serving the community since 2007.</p>
+            </div>
+            <div class="about-info" id="about-info"></div>
+          </div>
+          <div class="about-hero__photo" id="about-photo">
+            <img src="russell-armine.jpg" alt="Russell Armine, Owner & Licensed Insurance Agent in Toms River, NJ" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft how-it-works">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>We make the process <span class="emphasis">easy</span>.</h2>
+          <p>Three simple steps from question to confident coverage.</p>
+        </div>
+        <div class="steps__grid" id="steps-grid">
+          <div class="step-card"><h3 class="step-card__title">Choose your insurance type</h3><p class="step-card__desc">We help you navigate your personal, commercial and life insurance options with ease.</p></div>
+          <div class="step-card"><h3 class="step-card__title">Connect with an expert</h3><p class="step-card__desc">Russell learns your needs, answers your questions, and helps you decide with confidence.</p></div>
+          <div class="step-card"><h3 class="step-card__title">Choose your perfect plan</h3><p class="step-card__desc">Select coverage from an expert-curated list of policies built for your needs.</p></div>
+        </div>
+        <div class="how-it-works__cta"><a class="btn-accent" href="contact.html">Get Your Free Quote <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></a></div>
+      </div>
+    </section>
+
+    <section class="bottom-cta bottom-cta--default">
+      <div class="bottom-cta__card">
+        <div class="bottom-cta__inner">
+          <div class="bottom-cta__text">
+            <h2 class="bottom-cta__title">Let's find your <span class="emphasis">coverage</span>.</h2>
+            <p class="bottom-cta__desc">Reach out for a free, no-obligation conversation about personal, commercial or life insurance.</p>
+            <a class="btn-accent" href="contact.html">Get a Free Quote <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></a>
+          </div>
+          <div class="bottom-cta__image">
+            <img src="cta-image-s.jpg" alt="Russell Armine, insurance agent at Armine Insurance Agency in Toms River, NJ" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer"></footer>
+
+      </div><!-- /#smooth-content -->
+    </div><!-- /#smooth-wrapper -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+    <script>
+      buildNav("about");
+      buildFooter();
+      initAbout();
+      buildSteps();
+      initSectionAlternation();
+    </script>
+  </body>
+</html>

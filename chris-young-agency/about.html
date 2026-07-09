@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Doran Lee Grohs | Life &amp; Commercial Insurance in Bakersfield, CA</title>
+    <meta
+      name="description"
+      content="Meet Doran Lee Grohs — a licensed Life & Commercial insurance producer with over 15 years of experience, serving clients across seven states with the Chris Young Agency."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Doran Lee Grohs",
+      "jobTitle": "Licensed Life & Commercial Insurance Producer",
+      "description": "Licensed Life and Commercial insurance producer with over 15 years of experience, licensed since April 2011, serving clients across seven states.",
+      "telephone": "+16059395229",
+      "email": "doran.l.grohs@mwarep.org",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "216 Montalvo Dr.",
+        "addressLocality": "Bakersfield",
+        "addressRegion": "CA",
+        "postalCode": "93309",
+        "addressCountry": "US"
+      },
+      "knowsAbout": ["Life Insurance", "Commercial Insurance", "Workers Compensation", "Business Owners Policy", "Term Life", "Whole Life"],
+      "knowsLanguage": ["English"],
+      "worksFor": { "@type": "Organization", "name": "Chris Young Agency" }
+    }
+    </script>
+  </head>
+  <body>
+    <nav class="nav" id="nav"></nav>
+
+    <section class="about-hero">
+      <div class="wrap">
+        <span class="about-hero__label">About Us</span>
+        <h1 class="about-hero__title">A <em>licensed producer</em> committed to <em>personalized, dependable</em> coverage built around you.</h1>
+        <div class="about-hero__row">
+          <div class="about-hero__main">
+            <p class="about-hero__pre"><em>Meet</em></p>
+            <h2 class="about-hero__name">Doran Lee Grohs</h2>
+            <p class="about-hero__role">Licensed Life &amp; Commercial Producer</p>
+            <div class="about-hero__bio">
+              <p>Doran Lee Grohs has over 15 years of experience, licensed since 2011 and serving clients across seven states. He focuses on tailored coverage in a no-pressure setting, with clear guidance and lasting partnerships with leading carriers.</p>
+            </div>
+            <div class="about-info" id="about-info"></div>
+          </div>
+          <div class="about-hero__photo" id="about-photo">
+            <img src="doran-grohs.png" alt="Doran Lee Grohs, Licensed Life & Commercial Insurance Producer in Bakersfield, CA" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft how-it-works">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>We make the process <span class="emphasis">easy</span>.</h2>
+          <p>Three simple steps from question to confident coverage.</p>
+        </div>
+        <div class="steps__grid" id="steps-grid">
+          <div class="step-card"><h3 class="step-card__title">Choose your insurance type</h3><p class="step-card__desc">We help you navigate your commercial and life insurance options with ease.</p></div>
+          <div class="step-card"><h3 class="step-card__title">Connect with an expert</h3><p class="step-card__desc">Doran learns your needs, answers your questions, and helps you decide with confidence.</p></div>
+          <div class="step-card"><h3 class="step-card__title">Choose your perfect plan</h3><p class="step-card__desc">Select coverage from an expert-curated list of policies built for your needs.</p></div>
+        </div>
+        <div class="how-it-works__cta"><a class="btn-accent" href="contact.html">Get Your Free Quote <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></a></div>
+      </div>
+    </section>
+
+    <section class="bottom-cta bottom-cta--default">
+      <div class="bottom-cta__card">
+        <div class="bottom-cta__inner">
+          <div class="bottom-cta__text">
+            <h2 class="bottom-cta__title">Let's find your <span class="emphasis">coverage</span>.</h2>
+            <p class="bottom-cta__desc">Reach out for a free, no-obligation conversation about life or commercial insurance.</p>
+            <a class="btn-accent" href="contact.html">Get a Free Quote <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H9M17 7V15"/></svg></a>
+          </div>
+          <div class="bottom-cta__image">
+            <img src="cta-image-s.jpg" alt="Doran Lee Grohs, insurance producer with the Chris Young Agency" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer"></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+    <script>
+      buildNav("about");
+      buildFooter();
+      initAbout();
+      buildSteps();
+      initSectionAlternation();
+    </script>
+  </body>
+</html>
