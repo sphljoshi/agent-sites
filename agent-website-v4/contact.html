@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get a Free Insurance Quote | Russell Armine, Toms River, NJ</title>
+    <meta
+      name="description"
+      content="Contact Russell Armine of Armine Insurance Agency, LLC for a free personal, commercial or life insurance quote with no obligation. Call (800) 944-2592, serving FL, NC, NJ and NY."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InsuranceAgency",
+      "name": "Armine Insurance Agency, LLC",
+      "telephone": "+18009442592",
+      "email": "raminsurance@aol.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2932 Crestview Lane",
+        "addressLocality": "Toms River",
+        "addressRegion": "NJ",
+        "postalCode": "08755",
+        "addressCountry": "US"
+      },
+      "areaServed": ["FL","NC","NJ","NY"],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <nav class="nav" id="nav"></nav>
+
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+
+    <!-- HERO -->
+    <section class="about-hero about-hero--center">
+      <div class="wrap">
+        <h1 class="about-hero__title">Get Your Free<br>Insurance Quote</h1>
+        <p class="about-hero__lead">Tell Russell what you're protecting and he'll respond promptly with tailored options. No cost, no obligation.</p>
+      </div>
+    </section>
+
+    <!-- IBLF SERVICE SWITCHER -->
+    <section class="section quote-section">
+      <div class="wrap">
+        <div class="quote-widget quote-widget--center">
+          <div class="quote-tabs" id="quote-tabs"></div>
+          <div class="quote-panel" id="quote-panel"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-details">
+      <div class="wrap">
+        <div class="contact-details__grid">
+          <div class="contact-details__intro">
+            <h2>Contact Details</h2>
+            <p>Reach out any time. Call, email, or stop by the office in Toms River.</p>
+          </div>
+          <div class="contact-info-row" id="contact-info"></div>
+        </div>
+        <div class="contact-extra">
+          <div class="contact-panel">
+            <h3>Agency hours</h3>
+            <div id="contact-hours"></div>
+          </div>
+          <div class="contact-panel">
+            <h3>Licensed states</h3>
+            <div id="contact-states"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer"></footer>
+
+      </div><!-- /#smooth-content -->
+    </div><!-- /#smooth-wrapper -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+    <script>
+      buildNav("contact");
+      buildFooter();
+      initContact();
+      initSectionAlternation();
+    </script>
+  </body>
+</html>
