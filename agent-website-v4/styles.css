@@ -1178,13 +1178,17 @@ img {
 .about-hero--contact {
   padding: 180px 0 120px;
 }
-/* Centered hero variant (services) — soft gold circle glow on muted */
+/* Centered hero variant (services, contact) — gold center glow with a soft fade to white at the bottom */
 .about-hero--center {
   text-align: center;
   padding: 170px 0 96px;
   background:
-    radial-gradient(circle at 50% 45%, rgba(232, 160, 32, 0.2) 0%, rgba(232, 160, 32, 0) 70%),
-    linear-gradient(180deg, #f5f6f8 0%, #f5f6f8 45%, #ffffff 100%);
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(255, 255, 255, 0.6) 88%, rgba(255, 255, 255, 1) 100%),
+    radial-gradient(circle at 50% 45%, rgba(232, 160, 32, 0.2) 0%, rgba(232, 160, 32, 0.06) 50%, rgba(232, 160, 32, 0) 75%);
+}
+/* Contact hero — tighter gap to the switcher below */
+.about-hero--center.about-hero--contact {
+  padding-bottom: 40px;
 }
 .about-hero--center .about-hero__title {
   margin: 0 auto;
@@ -1471,6 +1475,9 @@ img {
 }
 
 /* ============================== SERVICES ============================== */
+.section.services-list {
+  padding-top: 32px;
+}
 /* Service switcher tabs */
 .service-switch__tabs {
   display: flex;
@@ -1607,6 +1614,27 @@ img {
   overflow: hidden;
 }
 /* Contact page — switcher stands alone as a centered block (wireframe) */
+.section.quote-section {
+  padding-top: 24px;
+}
+.quote-widget-wrap {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+}
+/* Scribble accent — same emphasis strokes as the home hero slider */
+.quote-scribble {
+  position: absolute;
+  top: -58px;
+  right: -34px;
+  color: var(--accent);
+  z-index: 1;
+}
+.quote-scribble svg {
+  display: block;
+  width: 66px;
+  height: auto;
+}
 .quote-widget--center {
   max-width: 760px;
   margin: 0 auto;
@@ -2774,7 +2802,7 @@ a.footer__contact-item:hover {
 /* --- 3 STEPS BAND (full-bleed navy) --- */
 .steps-band {
   padding: 96px 0;
-  background: radial-gradient(circle, hsla(239, 40%, 25%, 1) 0%, hsla(222, 71%, 11%, 1) 100%);
+  background: #08132e;
 }
 .sec-head--dark h2 {
   color: #fff;
@@ -2954,7 +2982,8 @@ a.footer__contact-item:hover {
   }
 }
 @media (max-width: 900px) {
-  .hero__scribble {
+  .hero__scribble,
+  .quote-scribble {
     display: none;
   }
 }
@@ -3037,7 +3066,8 @@ a.footer__contact-item:hover {
 
 /* Scribble pop-in */
 @media (prefers-reduced-motion: no-preference) {
-  .hero__scribble {
+  .hero__scribble,
+  .quote-scribble {
     animation: scribble-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s backwards;
   }
 }
