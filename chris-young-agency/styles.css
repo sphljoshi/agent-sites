@@ -420,10 +420,6 @@ img {
 .coverage__grid--3 {
   grid-template-columns: repeat(3, 1fr);
 }
-.coverage__grid--3 .coverage__card:nth-child(1),
-.coverage__grid--3 .coverage__card:nth-child(4) {
-  grid-column: span 2;
-}
 .coverage__card {
   display: flex;
   flex-direction: column;
@@ -1563,8 +1559,7 @@ img {
   .coverage__grid--2 {
     grid-template-columns: 1fr 1fr;
   }
-  .coverage__grid--3 .coverage__card:nth-child(1),
-  .coverage__grid--3 .coverage__card:nth-child(4) {
+  .coverage__grid--3 .coverage__card:nth-child(1) {
     grid-column: span 2;
   }
   .stats-band__grid {
@@ -1685,8 +1680,7 @@ img {
   .coverage__grid--2 {
     grid-template-columns: 1fr;
   }
-  .coverage__grid--3 .coverage__card:nth-child(1),
-  .coverage__grid--3 .coverage__card:nth-child(4) {
+  .coverage__grid--3 .coverage__card:nth-child(1) {
     grid-column: span 1;
   }
   .about-info {
