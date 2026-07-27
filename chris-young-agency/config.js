@@ -16,8 +16,8 @@ const AGENT = {
   phone: "(605) 939-5229",
   phoneHref: "tel:+16059395229",
   email: "doran.l.grohs@mwarep.org",
-  location: "Bakersfield, CA",
-  address: "216 Montalvo Dr., Bakersfield, CA 93309",
+  location: "Rapid City, SD",
+  address: "628 1/2 6th Street, Rapid City, SD 57701",
   social: { linkedin: null, facebook: null, twitter: null },
   logo: null, // null → text brand fallback
 
@@ -59,6 +59,7 @@ const AGENT = {
   quoteLinks: {
     commercial: "https://aght.us/a84779c0",
     life: "https://aght.us/b88e0af4",
+    personal: "https://aght.us/5a1dafd0",
   },
 
   stats: [
@@ -67,13 +68,16 @@ const AGENT = {
     { value: "8", label: "carrier partners" },
   ],
 
+  // Which services appear in the contact-page quote switcher (subset of services).
+  quoteTabs: ["personal", "commercial", "life"],
+
   services: {
     commercial: {
       label: "Commercial Insurance",
       eyebrow: "For your business",
       image: "commercial-overlay.jpg",
       description:
-        "Comprehensive protection for your business — from liability and property to vehicles, workers, and the unexpected. Coverage built around how your business actually operates.",
+        "Comprehensive protection for your business, covering liability, property, vehicles, staff, and the daily risks you face.",
       items: [
         "Commercial Auto",
         "General Liability",
@@ -94,7 +98,7 @@ const AGENT = {
       eyebrow: "For your family",
       image: "life-overlay.jpg",
       description:
-        "Financial security for the people who matter most. Term, whole, and specialized life solutions that protect your family's future and your legacy.",
+        "Financial security for the people who matter most, with term, whole, and other policies that safeguard your family well.",
       items: [
         "Term Life",
         "Whole Life",
@@ -105,6 +109,29 @@ const AGENT = {
         "Mortgage",
         "Credit",
         "Supplemental",
+      ],
+    },
+    personal: {
+      label: "Personal Insurance",
+      eyebrow: "For your home & auto",
+      image: "personal-insurance-overlay-img.webp",
+      description:
+        "Complete coverage for your home, autos, and belongings, safeguarding the everyday assets and lifestyle you have created.",
+      items: [
+        "Personal Auto",
+        "Homeowners",
+        "Condominium",
+        "Renters",
+        "Dwelling Fire",
+        "Mobile Homeowners",
+        "Personal Umbrella",
+        "Personal & Premises Liability",
+        "Motorcycle",
+        "Recreational Vehicles",
+        "Watercraft",
+        "Yacht",
+        "Flood",
+        "Pet Insurance",
       ],
     },
   },

@@ -22,6 +22,7 @@ const ICONS = {
 const SERVICE_ICONS = {
   commercial: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><line x1="9" y1="9" x2="9" y2="9.01"/><line x1="9" y1="12" x2="9" y2="12.01"/><line x1="9" y1="15" x2="9" y2="15.01"/></svg>',
   life: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>',
+  personal: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-6h6v6"/></svg>',
 };
 
 /* ---------- Icon layer 3: one per individual policy ---------- */
@@ -44,6 +45,11 @@ const P = {
   home: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21v-6h6v6"/></svg>',
   flower: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a3 3 0 0 0 0 6 3 3 0 0 0 0-6zM12 16a3 3 0 0 0 0 6 3 3 0 0 0 0-6zM2 12a3 3 0 0 0 6 0 3 3 0 0 0-6 0zM16 12a3 3 0 0 0 6 0 3 3 0 0 0-6 0z"/></svg>',
   users: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  bike: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="16.5" r="3"/><circle cx="18.5" cy="16.5" r="3"/><path d="M8.5 16.5h6l-3.5-6h4.5"/><path d="M14.5 10.5 16 8.5"/></svg>',
+  boat: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h18l-2 5a2 2 0 0 1-2 1H7a2 2 0 0 1-2-1z"/><path d="M12 14V4l7 8"/></svg>',
+  paw: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="11" r="1.6"/><circle cx="10" cy="8" r="1.6"/><circle cx="14" cy="8" r="1.6"/><circle cx="18" cy="11" r="1.6"/><path d="M8 17c0-2 1.8-3.5 4-3.5s4 1.5 4 3.5-1.8 2.6-4 2.6-4-.6-4-2.6z"/></svg>',
+  droplet: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg>',
+  rv: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V8a2 2 0 0 1 2-2h11l4 5v6h-2"/><path d="M3 17h4"/><path d="M11 17h4"/><circle cx="9" cy="17" r="2"/><rect x="6" y="9" width="4" height="3"/></svg>',
 };
 const POLICY_ICONS = {
   // commercial
@@ -69,6 +75,21 @@ const POLICY_ICONS = {
   mortgage: P.home,
   credit: P.shield,
   supplemental: P.heart,
+  // personal
+  "personal auto": P.car,
+  homeowners: P.home,
+  condominium: P.building,
+  renters: P.building,
+  "dwelling fire": P.fire,
+  "mobile homeowners": P.home,
+  "personal umbrella": P.umbrella,
+  "personal & premises liability": P.liability,
+  motorcycle: P.bike,
+  "recreational vehicles": P.rv,
+  watercraft: P.boat,
+  yacht: P.boat,
+  flood: P.droplet,
+  "pet insurance": P.paw,
 };
 function policyIcon(name) {
   return POLICY_ICONS[name.toLowerCase()] || ICONS.check;
@@ -90,6 +111,13 @@ function serviceKeys() {
 function serviceLabelShort(key) {
   // "Commercial Insurance" -> "Commercial"
   return AGENT.services[key].label.replace(/\s*Insurance$/i, "");
+}
+function quoteHref(key) {
+  // External quote link when configured; otherwise route to the contact page.
+  return AGENT.quoteLinks[key] || "contact.html";
+}
+function quoteTarget(href) {
+  return /^https?:/i.test(href) ? ' target="_blank" rel="noopener"' : "";
 }
 function coverageJoin() {
   const labels = serviceKeys().map(serviceLabelShort);
@@ -238,9 +266,8 @@ function initHome() {
   if (btns) {
     btns.innerHTML = serviceKeys()
       .map((k) => {
-        const link = AGENT.quoteLinks[k] || "#";
-        const target =
-          link && link !== "#" ? ' target="_blank" rel="noopener"' : "";
+        const link = quoteHref(k);
+        const target = quoteTarget(link);
         return `<a class="hero__quote-btn" href="${link}"${target}>
           <span class="hero__quote-btn-icon">${SERVICE_ICONS[k] || ICONS.shield}</span>
           ${serviceLabelShort(k)} <span class="hero__quote-btn-arrow">${ICONS.chevron}</span>
@@ -258,6 +285,8 @@ function initHome() {
         ? ["accent"]
         : keys.length === 2
         ? ["accent", "primary"]
+        : keys.length === 3
+        ? ["accent", "light", "primary"]
         : ["accent", "light", "light", "primary"];
     grid.className = `coverage__grid coverage__grid--${keys.length}`;
     grid.innerHTML = keys
@@ -401,8 +430,8 @@ function initServices() {
   container.innerHTML = serviceKeys()
     .map((k) => {
       const s = AGENT.services[k];
-      const link = AGENT.quoteLinks[k] || "#";
-      const target = link && link !== "#" ? ' target="_blank" rel="noopener"' : "";
+      const link = quoteHref(k);
+      const target = quoteTarget(link);
       const img = s.image || AGENT.photo;
       const items = s.items
         .map(
@@ -438,7 +467,11 @@ function initContact() {
   const tabs = document.getElementById("quote-tabs");
   const panel = document.getElementById("quote-panel");
   if (tabs && panel) {
-    const keys = serviceKeys();
+    // Contact switcher shows only the services listed in AGENT.quoteTabs
+    // (falling back to all services), filtered to ones that actually exist.
+    const keys = (AGENT.quoteTabs || serviceKeys()).filter(
+      (k) => AGENT.services[k]
+    );
     tabs.innerHTML = keys
       .map(
         (k, i) =>
@@ -450,8 +483,8 @@ function initContact() {
 
     const renderPanel = (k) => {
       const s = AGENT.services[k];
-      const link = AGENT.quoteLinks[k] || "#";
-      const target = link && link !== "#" ? ' target="_blank" rel="noopener"' : "";
+      const link = quoteHref(k);
+      const target = quoteTarget(link);
       panel.innerHTML = `
         <h3 class="quote-panel__title">${s.label}</h3>
         <p class="quote-panel__desc">${s.description}</p>
