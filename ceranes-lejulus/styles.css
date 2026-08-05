@@ -1339,12 +1339,33 @@ img {
   line-height: 1.7;
   margin-top: 12px;
 }
+/* Remaining bio paragraphs — two columns on the same tracks as the grid
+   above, so the right column lines up with the bio beside the photo */
+.about-intro__extra {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(40px, 6vw, 80px);
+  margin-top: clamp(32px, 4.5vw, 64px);
+}
+.about-intro__extra p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.about-intro__extra[hidden] {
+  display: none;
+}
 @media (max-width: 900px) {
   .about-intro__grid {
     grid-template-columns: 1fr;
   }
   .about-intro__media img {
     max-height: 420px;
+  }
+  .about-intro__extra {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 24px;
   }
 }
 

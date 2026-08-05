@@ -62,6 +62,15 @@ const P = {
   key: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg>',
   motorcycle: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="17" r="3"/><circle cx="19" cy="17" r="3"/><path d="M5 17h5l3-5h5l-2-3h-3"/><path d="M9 12 7 8H4"/></svg>',
   boat: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2.4 2.4 0 0 0 2 1 2.4 2.4 0 0 0 2-1 2.4 2.4 0 0 1 2-1 2.4 2.4 0 0 1 2 1 2.4 2.4 0 0 0 2 1 2.4 2.4 0 0 0 2-1 2.4 2.4 0 0 1 2-1 2.4 2.4 0 0 1 2 1 2.4 2.4 0 0 0 2 1"/><path d="M4 18 3 9h18l-1 9"/><path d="M12 3v6"/><path d="M12 3 8 6"/><path d="m12 3 4 3"/></svg>',
+  idCard: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="11" r="2"/><path d="M5 16.25c.75-1.35 1.75-2 3-2s2.25.65 3 2"/><path d="M14.5 10.5h4"/><path d="M14.5 14h4"/></svg>',
+  shieldPlus: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8.5v5"/><path d="M9.5 11h5"/></svg>',
+  pill: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg>',
+  tooth: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5c-1.4-1.4-2.9-1.9-4.4-1.4C5.7 4.8 4.7 6.5 4.7 9c0 2.4.8 3.9 1.3 6 .4 1.9.6 4.2 1.9 4.2 1.2 0 1.5-1.7 1.7-3.4.2-1.3.6-2.4 2.4-2.4s2.2 1.1 2.4 2.4c.2 1.7.5 3.4 1.7 3.4 1.3 0 1.5-2.3 1.9-4.2.5-2.1 1.3-3.6 1.3-6 0-2.5-1-4.2-2.9-4.9-1.5-.5-3 0-4.4 1.4Z"/></svg>',
+  eye: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.75"/></svg>',
+  ear: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6 6 0 1 1 12 0c0 3-2 4.2-3.2 5.4-1 1-1.3 1.8-1.3 3.1a3.5 3.5 0 0 1-7 0"/><path d="M14.5 8.5a2.5 2.5 0 0 0-5 0v1.2a2 2 0 0 1-2 2"/></svg>',
+  hospital: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V6a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v15"/><path d="M12 8.5v5"/><path d="M9.5 11h5"/></svg>',
+  pulse: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12h4l2-5 3.5 10 2.5-5h7"/></svg>',
+  savings: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5v19"/><path d="M16.5 7c0-1.8-2-2.9-4.5-2.9S7.5 5.2 7.5 7c0 4.3 9 2.1 9 6.7 0 1.8-2 2.9-4.5 2.9s-4.5-1.1-4.5-2.9"/></svg>',
 };
 const POLICY_ICONS = {
   // personal
@@ -78,6 +87,18 @@ const POLICY_ICONS = {
   "personal & premises liability": P.liability,
   "personal umbrella": P.umbrella,
   landlord: P.building,
+  // personal — health, Medicare & supplemental
+  "medicare advantage": P.idCard,
+  "medicare supplement": P.shieldPlus,
+  "prescription drug": P.pill,
+  "dental plans": P.tooth,
+  "vision plans": P.eye,
+  "hearing plans": P.ear,
+  "individual / family plans": P.users,
+  "final expense insurance": P.flower,
+  "critical illness": P.pulse,
+  "hospital indemnity insurance": P.hospital,
+  annuities: P.savings,
   // commercial
   "commercial auto": P.car,
   "business automobile": P.car,
@@ -477,11 +498,19 @@ function buildSteps() {
    ============================================================= */
 function initAbout() {
   const bioEl = document.getElementById("about-bio");
+  const bioExtraEl = document.getElementById("about-bio-extra");
   if (bioEl) {
-    bioEl.innerHTML = AGENT.bio
-      .split("\n\n")
-      .map((p) => `<p>${p}</p>`)
-      .join("");
+    const paras = AGENT.bio.split("\n\n").filter((p) => p.trim());
+    const wrapP = (list) => list.map((p) => `<p>${p}</p>`).join("");
+    /* First two paragraphs sit beside the photo; the rest flow into the
+       two-column band below it (falls back to one column if absent). */
+    const lead = bioExtraEl ? paras.slice(0, 2) : paras;
+    bioEl.innerHTML = wrapP(lead);
+    if (bioExtraEl) {
+      const rest = paras.slice(2);
+      bioExtraEl.innerHTML = wrapP(rest);
+      bioExtraEl.hidden = rest.length === 0;
+    }
   }
   const photoEl = document.getElementById("about-photo");
   if (photoEl && AGENT.photo) {
@@ -878,6 +907,7 @@ function initReveal() {
     ".about-hero__bio",
     ".about-intro__title",
     ".about-intro__bio",
+    ".about-intro__extra p",
     ".stats-band__title",
     ".stats-band__subtitle",
     ".service-block__title",
