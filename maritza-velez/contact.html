@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get a Free Insurance Quote | Maritza Velez — Orlando, FL</title>
+    <meta
+      name="description"
+      content="Contact Value Care Insurance Agency for a free, no-obligation commercial, personal or life insurance quote. Call (407) 494-4983 — Orlando, FL, licensed in 21 states."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InsuranceAgency",
+      "name": "Value Care Insurance Agency",
+      "url": "https://www.valuecareinsurance.com",
+      "telephone": "+14074944983",
+      "email": "info@valuecareinsurance.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Orlando",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.facebook.com/VALUECAREINSAGENCY/",
+        "https://www.linkedin.com/in/valuecareinsurance/"
+      ],
+      "areaServed": ["DC", "DE", "FL", "GA", "HI", "ID", "IN", "MA", "ME", "MI", "MO", "NC", "OH", "OK", "OR", "PA", "RI", "TN", "TX", "WI", "WV"],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <nav class="nav" id="nav"></nav>
+
+    <section class="about-hero about-hero--contact">
+      <div class="wrap contact-hero__grid">
+        <div class="contact-hero__content">
+          <span class="about-hero__label">Contact</span>
+          <h1 class="about-hero__title">Get a free quote, built <em>around your needs.</em></h1>
+          <p class="about-hero__lead">Tell Maritza what you're protecting and she'll respond promptly with tailored options — no cost, no obligation, just clear guidance.</p>
+        </div>
+        <div class="quote-widget">
+          <div class="quote-tabs" id="quote-tabs"></div>
+          <div class="quote-panel" id="quote-panel"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="wrap">
+        <div class="contact-info-row" id="contact-info"></div>
+        <div class="contact-extra">
+          <div class="contact-panel">
+            <h3>Agency hours</h3>
+            <div id="contact-hours"></div>
+          </div>
+          <div class="contact-panel">
+            <h3>Licensed states</h3>
+            <div id="contact-states"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer"></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+    <script>
+      buildNav("contact");
+      buildFooter();
+      initContact();
+      initSectionAlternation();
+    </script>
+  </body>
+</html>
