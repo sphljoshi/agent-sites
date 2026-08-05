@@ -14,9 +14,11 @@ const AGENT = {
     'Protecting Your Health,<br>Wealth &amp; <span class="emphasis">Legacy</span>.',
   // Hero content rule: subtitle must fit two lines in the hero (keep it short).
   tagline:
-    "Protection for today, and beyond. Whether you're providing for your loved ones, planning your retirement, or building your wealth — we're here to help.",
+    "Protection for today, and the days ahead. Whether you're doing your own research, trying to figure out what's right for you, or just want to talk to someone — you can rely on our expertise.",
+  // About intro bio. Paragraphs are split on "\n\n": the first two render beside
+  // the photo, the rest flow into the two-column band below it (see initAbout).
   bio:
-    "Everbe Insurance was established to assist modern consumers and help them protect, grow and thrive. Our team helps consumers find unbiased, customized insurance coverage at any stage of their journey. Unlike other online platforms, we are not obligated to any insurance carrier — our top priority is to help you, your family and the community thrive.\n\nCeranes Lejulus, the founder of Everbe Insurance, has worked for many years as a Licensed Insurance Advisor serving seniors, families, and businesses. With more than 15 years of industry experience, he holds active insurance licenses across multiple states, and his extensive background allows him to support a wide range of insurance needs.\n\nAs an independent agent, Ceranes represents numerous national and regional insurance carriers, ensuring his recommendations are guided by the needs of his clients — not the insurance companies. He has built strong partnerships with leading organizations such as UnitedHealthcare, Humana, Aetna, Cigna (HealthSpring), National Life Group, and Nationwide Insurance, among others. He is also a member of the National Sales Network (NSN), a nationwide alliance of professionals who collaborate to better serve clients and strengthen relationships with major insurance providers.",
+    "Everbe Insurance was founded to help today’s consumers protect what matters most, build financial security, and thrive at every stage of life. Our team is committed to providing personalized, unbiased insurance solutions tailored to each client’s unique needs. Unlike many insurance platforms, we are not affiliated with a single carrier, allowing us to focus on what is best for you, your family, and your community.\n\nCeranes Lejulus, founder of Everbe Insurance, is a Licensed Insurance Advisor with more than 15 years of industry experience serving seniors, families, and business owners. Licensed in multiple states, he brings extensive knowledge and expertise to help clients navigate a wide range of insurance and financial protection needs.\n\nAs an independent agent, Ceranes partners with leading national and regional insurance carriers, ensuring that every recommendation is based on the best interests of his clients rather than the priorities of any one insurance company. His broad network of carrier relationships allows him to provide customized coverage options and competitive solutions tailored to individual circumstances.\n\nCeranes is also a member of the National Sales Network (NSN), a nationwide organization of professionals dedicated to collaboration, client advocacy, and industry excellence. Through these relationships, Everbe Insurance remains well-positioned to deliver exceptional service and access to a diverse range of insurance products and solutions.",
   experience: "15",
   photo: "images/about-us-hero.webp",
   heroImage: "hero-image.jpg", // kept for compatibility — NOT rendered in v3
@@ -39,8 +41,8 @@ const AGENT = {
     twitter: "https://www.x.com/healthugo/",
     youtube: "https://www.youtube.com/@medicarelism",
   },
-  logo: "logo/normal.webp", // null → text brand fallback
-  logoInverse: "logo/inverse.webp", // used on the dark footer
+  logo: "logo/everbe-normal-logo.webp", // null → text brand fallback
+  logoInverse: "logo/everbe-inverse-logo.webp", // used on the dark footer
 
   hours: [
     { days: "Monday to Saturday", time: "9:00 AM to 6:00 PM" },
@@ -138,6 +140,18 @@ const AGENT = {
         "Home Protection",
         "Pet Insurance",
         "Roadside Assistance",
+        // Health, Medicare & supplemental
+        "Medicare Advantage",
+        "Medicare Supplement",
+        "Prescription Drug",
+        "Dental Plans",
+        "Vision Plans",
+        "Hearing Plans",
+        "Individual / Family Plans",
+        "Final Expense Insurance",
+        "Critical Illness",
+        "Hospital Indemnity Insurance",
+        "Annuities",
       ],
     },
     commercial: {
