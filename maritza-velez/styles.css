@@ -2,16 +2,30 @@
 
 /* ============================== TOKENS ============================== */
 :root {
-  --primary: #262758;
-  --primary-light: #3a3c8f;
-  --primary-dark: #181940;
-  --accent: #e8a020;
-  --accent-light: #f5bc50;
-  --bg-soft: #f4f7fb;
-  --bg-dark: #181940;
-  --border: #dde4ee;
-  --text: #1a2535;
-  --text-muted: #5a6a80;
+  /* Brand — primary carries icons, dark surfaces and the footer;
+     secondary is reserved for button fills and highlight accents. */
+  --primary: #054f9f;
+  --primary-light: #1d6fd0;
+  --primary-dark: #033566;
+  /* Light tint of primary — for icons sitting on primary/dark surfaces,
+     where solid --primary would be unreadable. */
+  --primary-tint: #8ec2f0;
+
+  --secondary: #e821c0;
+  --secondary-light: #f24bd0;
+  /* Darkened secondary — for small magenta text on white, where #e821c0
+     only reaches 3.9:1 against white and fails WCAG AA. */
+  --secondary-deep: #a8148c;
+
+  /* Legacy alias: decorative highlights that are neither icon nor button */
+  --accent: var(--secondary);
+  --accent-light: var(--secondary-light);
+
+  --bg-soft: #f1f6fc;
+  --bg-dark: #033566;
+  --border: #dbe5f2;
+  --text: #10243c;
+  --text-muted: #55697f;
   --white: #ffffff;
 
   --r-sm: 8px;
@@ -19,9 +33,9 @@
   --r-lg: 20px;
   --r-xl: 32px;
 
-  --shadow-sm: 0 2px 8px rgba(24, 25, 64, 0.06);
-  --shadow-md: 0 12px 30px rgba(24, 25, 64, 0.1);
-  --shadow-lg: 0 24px 60px rgba(24, 25, 64, 0.18);
+  --shadow-sm: 0 2px 8px rgba(3, 53, 102, 0.07);
+  --shadow-md: 0 12px 30px rgba(3, 53, 102, 0.12);
+  --shadow-lg: 0 24px 60px rgba(3, 53, 102, 0.2);
 
   --serif: "Instrument Sans", system-ui, -apple-system, sans-serif;
 }
@@ -62,14 +76,14 @@ img {
   padding: 88px 0;
 }
 .section--soft {
-  background: #f5f6f8;
+  background: var(--bg-soft);
 }
 
 /* Emphasis word — editorial italic accent used across all titles */
 .emphasis {
   font-family: inherit;
   font-style: italic;
-  font-weight: inherit;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -89,11 +103,11 @@ img {
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 .btn-accent {
-  background: var(--accent);
-  color: var(--primary-dark);
+  background: var(--secondary);
+  color: #fff;
 }
 .btn-accent:hover {
-  background: var(--accent-light);
+  background: var(--secondary-light);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -128,7 +142,7 @@ img {
 }
 .sec-head h2 {
   font-size: clamp(28px, 4.4vw, 42px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -1px;
 }
@@ -153,6 +167,19 @@ img {
   height: 36px;
   width: auto;
 }
+/* Nav sits on the white pill, so the transparent logo drops straight in. */
+.nav__brand .brand-logo {
+  height: 65px;
+  width: 65px;
+  object-fit: contain;
+}
+/* Footer logo sits directly on --primary with no backing plate. */
+.footer__brand .brand-logo {
+  height: 140px;
+  width: 140px;
+  background: transparent;
+  object-fit: contain;
+}
 
 /* ============================== NAV (floating pill) ============================== */
 .nav {
@@ -171,8 +198,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
-  padding: 0 16px 0 34px;
+  /* Sized to clear the 65px brand logo with breathing room. */
+  height: 86px;
+  padding: 0 16px 0 28px;
   background: #fff;
   border-radius: 999px;
   box-shadow: var(--shadow-md);
@@ -207,8 +235,8 @@ img {
   font-weight: 600;
 }
 .nav__cta {
-  background: var(--accent);
-  color: var(--primary-dark);
+  background: var(--secondary);
+  color: #fff;
   font-weight: 600;
   font-size: 15px;
   padding: 11px 22px;
@@ -219,7 +247,7 @@ img {
   transition: background 0.15s ease, transform 0.15s ease;
 }
 .nav__cta:hover {
-  background: var(--accent-light);
+  background: var(--secondary-light);
   transform: translateY(-1px);
 }
 .nav__cta-arrow {
@@ -285,7 +313,7 @@ img {
   width: 460px;
   height: 460px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(232, 160, 32, 0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(232, 33, 192, 0.22), transparent 70%);
 }
 .hero__inner {
   width: 100%;
@@ -300,7 +328,7 @@ img {
 .hero__title {
   color: #fff;
   font-size: clamp(32px, 5vw, 48px);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.08;
   letter-spacing: -1px;
 }
@@ -328,7 +356,8 @@ img {
   margin-bottom: 22px;
 }
 .hero__badge svg {
-  color: var(--accent-light);
+  /* Icon on the dark hero — solid --primary would be illegible here */
+  color: var(--primary-tint);
 }
 
 /* Floating quote bar */
@@ -379,7 +408,7 @@ img {
 }
 .hero__quote-btn-icon {
   display: inline-flex;
-  color: var(--accent);
+  color: var(--primary);
 }
 .hero__quote-btn-icon svg {
   width: 18px;
@@ -433,11 +462,11 @@ img {
   box-shadow: var(--shadow-md);
 }
 .coverage__card--accent {
-  background: var(--accent);
-  color: var(--primary-dark);
+  background: var(--primary);
+  color: #fff;
 }
 .coverage__card--primary {
-  background: var(--primary);
+  background: var(--primary-dark);
   color: #fff;
 }
 .coverage__card--light {
@@ -524,14 +553,14 @@ img {
 }
 .stats-band__title {
   font-size: clamp(28px, 4.4vw, 42px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: -1px;
   max-width: 20ch;
 }
 .stats-band__title em {
   font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
 }
 .stats-band__hl {
   color: var(--accent);
@@ -541,7 +570,9 @@ img {
   font-size: 16px;
   line-height: 1.65;
   margin-top: 22px;
-  max-width: 440px;
+  /* Wide enough for the full "Why Value Care" paragraph without
+     overrunning the 1.1fr content column. */
+  max-width: 560px;
 }
 .stats-band__image {
   border-radius: var(--r-lg);
@@ -582,7 +613,7 @@ img {
   display: block;
   font-size: 16px;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--secondary-deep);
   margin-top: 10px;
   white-space: nowrap;
 }
@@ -603,7 +634,7 @@ img {
 }
 .step-card__icon {
   display: inline-flex;
-  color: var(--accent);
+  color: var(--primary);
   margin-bottom: 20px;
 }
 .step-card__icon svg {
@@ -671,12 +702,12 @@ img {
   grid-column: span 2;
 }
 .review-card--accent {
-  background: var(--accent);
+  background: var(--primary);
   border-color: transparent;
-  color: var(--primary-dark);
+  color: #fff;
 }
 .review-card--dark {
-  background: var(--primary);
+  background: var(--primary-dark);
   border-color: transparent;
   color: #fff;
 }
@@ -714,7 +745,7 @@ img {
   color: rgba(255, 255, 255, 0.65);
 }
 .review-card--accent .review-card__role {
-  color: rgba(24, 25, 64, 0.6);
+  color: rgba(255, 255, 255, 0.65);
 }
 
 /* ============================== FAQ ============================== */
@@ -723,10 +754,10 @@ img {
   margin: 0 auto;
 }
 .faq__item {
-  background: #f7f5f3;
+  background: #f3f7fc;
   border-radius: var(--r-md);
   margin-bottom: 12px;
-  box-shadow: 0 1px 3px rgba(24, 25, 64, 0.05);
+  box-shadow: 0 1px 3px rgba(3, 53, 102, 0.06);
   overflow: hidden;
 }
 .faq__btn {
@@ -760,8 +791,8 @@ img {
 }
 .faq__item--open .faq__toggle {
   transform: rotate(45deg);
-  background: var(--accent);
-  color: var(--primary-dark);
+  background: var(--secondary);
+  color: #fff;
 }
 .faq__body {
   max-height: 0;
@@ -791,8 +822,8 @@ img {
   border-radius: var(--r-xl);
   background: radial-gradient(
       140% 150% at 100% 0%,
-      rgba(232, 160, 32, 0.3) 0%,
-      rgba(232, 160, 32, 0) 55%
+      rgba(232, 33, 192, 0.3) 0%,
+      rgba(232, 33, 192, 0) 55%
     ),
     linear-gradient(
       120deg,
@@ -801,8 +832,8 @@ img {
     ),
     radial-gradient(
       130% 150% at 0% 100%,
-      rgba(232, 160, 32, 0.16) 0%,
-      rgba(232, 160, 32, 0) 55%
+      rgba(232, 33, 192, 0.16) 0%,
+      rgba(232, 33, 192, 0) 55%
     ),
     linear-gradient(135deg, #e9f2fb 0%, #ffffff 55%, #f4f9ff 100%);
   box-shadow: var(--shadow-md);
@@ -818,7 +849,7 @@ img {
 }
 .bottom-cta__title {
   font-size: clamp(28px, 4.5vw, 42px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.8px;
   color: var(--text);
@@ -869,7 +900,8 @@ img {
 .page-hero {
   background: linear-gradient(135deg, var(--primary-dark), var(--primary));
   color: #fff;
-  padding: 140px 0 80px;
+  /* Clears the fixed nav (18px offset + 86px pill). */
+  padding: 146px 0 80px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -882,11 +914,11 @@ img {
   width: 320px;
   height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(232, 160, 32, 0.18), transparent 70%);
+  background: radial-gradient(circle, rgba(232, 33, 192, 0.18), transparent 70%);
 }
 .page-hero h1 {
   font-size: clamp(32px, 5vw, 48px);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -1px;
   position: relative;
   z-index: 2;
@@ -911,12 +943,13 @@ img {
 
 /* ============================== ABOUT HERO (editorial) ============================== */
 .about-hero {
-  padding: 140px 0 80px;
+  /* Clears the fixed nav (18px offset + 86px pill). */
+  padding: 146px 0 80px;
   background: radial-gradient(
     70% 70% at 50% 50%,
-    rgba(232, 160, 32, 0.16) 0%,
-    rgba(232, 160, 32, 0.05) 42%,
-    rgba(232, 160, 32, 0) 75%
+    rgba(232, 33, 192, 0.16) 0%,
+    rgba(232, 33, 192, 0.05) 42%,
+    rgba(232, 33, 192, 0) 75%
   );
 }
 .about-hero--contact {
@@ -933,14 +966,14 @@ img {
 }
 .about-hero__title {
   font-size: clamp(28px, 4.4vw, 42px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: -1px;
   max-width: 35ch;
 }
 .about-hero__title em {
   font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
 }
 .about-hero__lead {
   margin-top: 24px;
@@ -996,7 +1029,6 @@ img {
   font-size: 16px;
   line-height: 1.65;
   color: var(--text-muted);
-  max-width: 440px;
 }
 .about-hero__bio p + p {
   margin-top: 14px;
@@ -1065,7 +1097,7 @@ img {
   display: block;
   font-size: 16px;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--secondary-deep);
   margin-top: 10px;
   white-space: nowrap;
 }
@@ -1160,7 +1192,7 @@ img {
 }
 .service-block__title {
   font-size: clamp(28px, 4.4vw, 42px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: -1px;
   margin-bottom: 14px;
@@ -1180,7 +1212,11 @@ img {
 }
 /* Left: image with overlay + quote button */
 .service-block__media {
-  position: relative;
+  /* Sticky so the image stays alongside long line-of-business lists */
+  position: sticky;
+  top: 112px;
+  align-self: start;
+  height: min(560px, calc(100vh - 150px));
   border-radius: var(--r-lg);
   overflow: hidden;
   background: var(--primary-dark);
@@ -1213,32 +1249,36 @@ img {
 /* Right: LOB grid */
 .policy-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 14px;
   align-content: start;
 }
 .policy-card {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 18px;
+  gap: 11px;
+  padding: 13px 16px;
   border: 1px solid var(--border);
   border-radius: var(--r-sm);
   background: #fff;
   transition: border-color 0.15s ease, color 0.15s ease;
 }
 .policy-card:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--secondary);
+  color: var(--secondary);
 }
 .policy-card__icon {
   display: inline-flex;
-  color: var(--accent);
+  color: var(--primary);
   flex-shrink: 0;
+}
+.policy-card:hover .policy-card__icon {
+  color: var(--secondary);
 }
 .policy-card__name {
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14.5px;
+  line-height: 1.35;
 }
 
 /* ============================== CONTACT ============================== */
@@ -1323,7 +1363,7 @@ img {
   font-weight: 500;
 }
 .quote-panel__list svg {
-  color: var(--accent);
+  color: var(--primary);
   flex-shrink: 0;
 }
 .quote-panel__cta {
@@ -1357,7 +1397,7 @@ img {
   flex-shrink: 0;
   border-radius: var(--r-md);
   background: var(--bg-soft);
-  color: var(--accent);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1393,7 +1433,7 @@ img {
   margin-bottom: 16px;
 }
 .contact-panel h3 svg {
-  color: var(--accent);
+  color: var(--primary);
 }
 .hours-row {
   display: flex;
@@ -1416,15 +1456,43 @@ img {
   font-weight: 500 !important;
 }
 
+/* ============================== MISSION & VISION ============================== */
+/* Deliberately NOT .section — initSectionAlternation() toggles section--soft on
+   those, which would override the primary background. */
+.mission-vision {
+  background: var(--primary);
+  color: #fff;
+  padding: clamp(64px, 8vw, 100px) 0;
+}
+.mission-vision__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.mission-vision__col:first-child {
+  padding-right: clamp(32px, 4.5vw, 64px);
+}
+/* Divider spans the full row because grid items stretch by default. */
+.mission-vision__col:last-child {
+  padding-left: clamp(32px, 4.5vw, 64px);
+  border-left: 1px solid rgba(255, 255, 255, 0.24);
+}
+.mission-vision__title {
+  font-size: clamp(24px, 3.2vw, 34px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+  margin-bottom: 18px;
+}
+.mission-vision__body {
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 16.5px;
+  line-height: 1.75;
+}
+
 /* ============================== FOOTER ============================== */
 .footer {
-  background: radial-gradient(
-    120% 110% at 50% 0%,
-    rgba(244, 250, 254, 0.8) 0%,
-    rgba(216, 232, 243, 0.8) 45%,
-    rgba(168, 204, 234, 0.8) 100%
-  );
-  color: var(--text);
+  background: var(--primary);
+  color: rgba(255, 255, 255, 0.78);
   padding: 104px 0 0;
 }
 .footer__grid {
@@ -1434,12 +1502,12 @@ img {
 }
 .footer__brand {
   font-size: 22px;
-  color: var(--primary-dark);
+  color: #fff;
   display: flex;
   gap: 5px;
 }
 .footer__tagline {
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.72);
   font-size: 14px;
   margin-top: 14px;
   max-width: 260px;
@@ -1457,47 +1525,49 @@ img {
   height: 38px;
   background: transparent;
   border: none;
-  color: var(--accent);
+  /* Icon on the primary footer — light tint of primary keeps it legible */
+  color: var(--primary-tint);
   transition: color 0.15s ease, transform 0.15s ease;
 }
 .footer__social:hover {
-  color: var(--accent-light);
+  color: var(--secondary-light);
   transform: translateY(-2px);
 }
 .footer__col-title {
   font-size: 22px;
   font-weight: 500;
-  color: var(--primary-dark);
+  color: #fff;
   margin-bottom: 16px;
 }
 .footer__col li {
   margin-bottom: 4px;
 }
 .footer__col-link {
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.72);
   font-size: 14px;
   font-weight: 500;
   line-height: 2;
   transition: color 0.15s ease;
 }
 .footer__col-link:hover {
-  color: var(--primary-dark);
+  color: #fff;
 }
 .footer__contact-row {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.72);
   font-size: 14px;
   margin-bottom: 10px !important;
 }
 .footer__contact-row svg {
   flex-shrink: 0;
   margin-top: 4px;
-  color: var(--accent);
+  /* Icon on the primary footer — light tint of primary keeps it legible */
+  color: var(--primary-tint);
 }
 .footer__divider {
-  border-top: 1px solid rgba(24, 25, 64, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
   margin: 48px 0 0;
 }
 .footer__bottom {
@@ -1507,7 +1577,7 @@ img {
   padding: 36px 24px;
   font-size: 13px;
   font-weight: 500;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.6);
   flex-wrap: wrap;
   gap: 8px;
 }
@@ -1593,16 +1663,24 @@ img {
   .stats-band__image {
     justify-self: start;
   }
-  .stats-band__stats {
-    flex-direction: column;
+  /* Stacked — the vertical divider becomes a horizontal one */
+  .mission-vision__grid {
+    grid-template-columns: 1fr;
   }
-  .stats-band__stat {
+  .mission-vision__col:first-child {
+    padding-right: 0;
+    padding-bottom: 36px;
+  }
+  .mission-vision__col:last-child {
+    padding-left: 0;
+    padding-top: 36px;
     border-left: none;
-    border-top: 1px solid var(--border);
-    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
   }
-  .stats-band__stat:first-child {
-    border-top: none;
+  /* Three short stats still fit side by side on a tablet — just tighten the
+     gutters. They stack at 768 with the other three-up rows. */
+  .stats-band__stat {
+    padding: 24px 22px;
   }
   .steps__grid {
     grid-template-columns: 1fr 1fr;
@@ -1622,7 +1700,17 @@ img {
     grid-template-columns: 1fr;
   }
   .service-block__media {
+    /* Stacked layout — drop the sticky behaviour */
+    position: relative;
+    top: auto;
+    height: auto;
     min-height: 340px;
+  }
+  /* Body is stacked, so the LOB list gets the full width. Let it fit as many
+     columns as it can rather than dropping to one — with 52 commercial lines,
+     a single column runs past 3000px. Falls to one column under ~500px. */
+  .policy-grid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   }
   .about-hero__photo {
     justify-self: start;
@@ -1699,6 +1787,19 @@ img {
   }
   .nav__hamburger {
     display: flex;
+    /* 28px tall at the default 6px padding — too small to hit reliably.
+       This brings the tap target to ~44px without changing the icon. */
+    padding: 14px 8px;
+  }
+  /* Inline anchors gave an 18px tap target; make them blocks with real
+     vertical padding so footer links are comfortably tappable. */
+  .footer__col-link {
+    display: inline-block;
+    line-height: 1.5;
+    padding: 8px 0;
+  }
+  .footer__col li {
+    margin-bottom: 0;
   }
   .coverage__grid--3,
   .coverage__grid--2 {
@@ -1719,8 +1820,19 @@ img {
   .info-card:first-child {
     border-top: none;
   }
-  .policy-grid {
-    grid-template-columns: 1fr;
+  /* Match the info cards — labels use white-space: nowrap, so three across
+     stops fitting here. */
+  .stats-band__stats {
+    flex-direction: column;
+  }
+  .stats-band__stat {
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .stats-band__stat:first-child {
+    border-top: none;
+    padding-top: 0;
   }
   .contact-info-row {
     grid-template-columns: 1fr;
@@ -1730,9 +1842,32 @@ img {
   }
 }
 
+/* Portrait photos are sized by a fixed 450px height on desktop. On a narrow
+   column that becomes a very tall crop, so switch to a full-width band. */
+@media (max-width: 600px) {
+  .about-hero__photo,
+  .stats-band__image {
+    justify-self: stretch;
+    width: 100%;
+  }
+  .about-hero__photo img,
+  .stats-band__image img {
+    width: 100%;
+    height: 340px;
+  }
+}
+
 @media (max-width: 480px) {
   .wrap {
     padding: 0 18px;
+  }
+  /* Keep the nav pill and hero quote bar on the same 18px gutter as .wrap,
+     so the logo, headline and quote bar all share one left edge. */
+  .nav {
+    padding: 18px 18px 0;
+  }
+  .hero__quote-bar {
+    width: calc(100% - 36px);
   }
   .steps__grid {
     grid-template-columns: 1fr;
@@ -1756,3 +1891,4 @@ img {
     font-size: 13px;
   }
 }
+
