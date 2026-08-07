@@ -65,35 +65,119 @@ const P = {
   coins: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>',
   wheelchair: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="3.5" r="1.8"/><path d="M10 7v6h5l3 7"/><path d="M10 13a5.5 5.5 0 1 0 5 7.5"/></svg>',
   bandage: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="7" width="21" height="10" rx="5" transform="rotate(-45 12 12)"/><path d="m8.5 8.5 7 7"/><line x1="10.5" y1="12" x2="10.5" y2="12.01"/><line x1="13.5" y1="12" x2="13.5" y2="12.01"/></svg>',
+  plane: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.8 16 14l-4-1.5L8 21l-1.5-.5.8-6.7L3 12.4V11l4.4.6L11 3.4 12.5 3l.6 8.2 6.8-2.2.6 1.4-5.1 3.6 4.1 4.5z"/></svg>',
+  wheat: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V9"/><path d="M12 9c0-2 1.2-3.5 3-4-.2 2.2-1.2 3.6-3 4z"/><path d="M12 9c0-2-1.2-3.5-3-4 .2 2.2 1.2 3.6 3 4z"/><path d="M12 15c0-2 1.2-3.5 3-4-.2 2.2-1.2 3.6-3 4z"/><path d="M12 15c0-2-1.2-3.5-3-4 .2 2.2 1.2 3.6 3 4z"/><path d="M12 5c0-1.6.8-2.6 2-3-.2 1.7-.8 2.6-2 3z"/></svg>',
+  ship: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 19c1.6 0 1.6 1.5 3.2 1.5S6.8 19 8.4 19s1.6 1.5 3.2 1.5S13.2 19 14.8 19s1.6 1.5 3.2 1.5S19.6 19 21.2 19"/><path d="M4 16 3 11h18l-1.2 5"/><path d="M12 11V4"/><path d="M8 7h8"/></svg>',
+  truck: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17V6h11v11"/><path d="M13 9h4l3 4v4h-2"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/><path d="M9 17h6"/></svg>',
+  wind: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h9a3 3 0 1 0-3-3"/><path d="M3 12h13a3 3 0 1 1-3 3"/><path d="M3 16h7a2.5 2.5 0 1 1-2.5 2.5"/></svg>',
+  quake: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h3l2.5-6L12 18l3-9 2 3h5"/></svg>',
+  gear: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M2 12h3M19 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2"/></svg>',
+  camera: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3z"/></svg>',
+  medical: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a5 5 0 0 0 10 0V3"/><path d="M4 3h3M15 3h3"/><path d="M11 14v2a4 4 0 0 0 8 0v-1"/><circle cx="19" cy="12" r="2"/></svg>',
+  calendar: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
+  train: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="13" rx="3"/><path d="M5 10h14"/><line x1="9" y1="13" x2="9" y2="13.01"/><line x1="15" y1="13" x2="15" y2="13.01"/><path d="m7 21 2-3M17 21l-2-3M6 19h12"/></svg>',
+  alert: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.9 18a2 2 0 0 0 1.7 3h16.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><line x1="12" y1="17" x2="12" y2="17.01"/></svg>',
+  calculator: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8"/><line x1="8" y1="12" x2="8" y2="12.01"/><line x1="12" y1="12" x2="12" y2="12.01"/><line x1="16" y1="12" x2="16" y2="12.01"/><line x1="8" y1="16" x2="8" y2="16.01"/><line x1="12" y1="16" x2="12" y2="16.01"/><line x1="16" y1="16" x2="16" y2="16.01"/></svg>',
+  compass: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="1.8"/><path d="m11 5.8-5 15M13 5.8l5 15"/><path d="m9.2 12.5 5.6 0"/></svg>',
+  wrench: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 6.5a4 4 0 0 0 5.2 5.2l-8.5 8.5a2.5 2.5 0 0 1-3.5-3.5l8.5-8.5a4 4 0 0 0-1.7-1.7L17 3a4 4 0 0 1 3 3z"/></svg>',
+  glass: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14l-7 8z"/><path d="M12 11v8"/><path d="M8 21h8"/></svg>',
+  horse: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c0-4 1.5-6 4-7.5L11 12l-2.5-2L6 8V5l3 2 2.5-1.5L14 3v3l3 2.5c2 1.7 3 3.8 3 6.5v6"/><line x1="8.5" y1="6" x2="8.5" y2="6.01"/></svg>',
+  crime: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8c3-2 5.5-2 9-2s6 0 9 2c0 4-2 6-4.5 6-1.6 0-2.2-1-2.7-1.8-.3-.5-.6-.7-.8-.7s-.5.2-.8.7C11.7 13 11.1 14 9.5 14 7 14 5 12 3 8z"/><path d="M6 18h12"/></svg>',
+  ransom: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3"/><path d="M6 21v-1.5A4.5 4.5 0 0 1 10.5 15h3a4.5 4.5 0 0 1 4.5 4.5V21"/><path d="m4 4 16 16"/></svg>',
+  motorcycle: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="16.5" r="3.2"/><circle cx="19" cy="16.5" r="3.2"/><path d="M5 16.5h4l4.5-6H10"/><path d="M13.5 10.5 16 16"/><path d="m14.5 6.5 2 .8 1.5 3.2"/></svg>',
+  boat: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18.5c1.6 0 1.6 1.5 3.2 1.5s1.6-1.5 3.2-1.5 1.6 1.5 3.2 1.5 1.6-1.5 3.2-1.5 1.6 1.5 3.2 1.5"/><path d="M3.5 15.5 5 11h11l4 4.5z"/><path d="M9 11V7h4l2 4"/></svg>',
+  cone: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 3h3l4.5 16H6z"/><path d="M8.6 10h6.8M7.5 14.5h9"/><path d="M3 21h18"/></svg>',
 };
 const POLICY_ICONS = {
   // commercial
-  "commercial auto": P.car,
-  "general liability": P.liability,
-  "business owners policy (bop)": P.briefcase,
+  "accountants professional": P.calculator,
+  "agricultural output program": P.wheat,
+  "agriculture liability": P.wheat,
+  "agriculture package": P.wheat,
+  "agriculture property": P.farm,
+  "agriculture scheduled & unscheduled personal property": P.farm,
+  "architects professional": P.compass,
+  artisans: P.wrench,
+  aviation: P.plane,
+  "bop liability": P.liability,
+  "bop property": P.briefcase,
+  "boiler and machinery": P.gear,
+  "business automobile": P.car,
+  "business owners": P.briefcase,
+  "commercial cyber and privacy liability": P.cyber,
+  "commercial fire": P.fire,
+  "commercial inland marine": P.package,
+  "commercial output program": P.chart,
+  "commercial package": P.package,
   "commercial property": P.building,
-  "workers compensation": P.workers,
   "commercial umbrella": P.umbrella,
+  crime: P.crime,
+  "directors and officers": P.users,
+  earthquake: P.quake,
+  "employers liability": P.workers,
+  "employment practices liability": P.gavel,
+  "equine liability": P.horse,
+  "errors and omissions": P.liability,
+  "excess liability": P.umbrella,
+  fiduciary: P.coins,
+  "garage and dealers": P.car,
+  "general liability": P.liability,
+  "installation / builders risk": P.hammer,
+  "kidnap and ransom": P.ransom,
+  "lawyers professional": P.gavel,
+  "liquor liability": P.glass,
+  "livestock mortality": P.horse,
+  "media professional": P.camera,
+  "medical professional liability": P.medical,
+  "miscellaneous professional liability": P.liability,
+  "motor carrier": P.truck,
+  "motor truck cargo": P.truck,
+  "ocean marine": P.ship,
+  "physicians and surgeons": P.medical,
+  "railroad protective liability": P.train,
+  "special event": P.calendar,
+  "special multi-peril": P.package,
+  surety: P.badge,
+  truckers: P.truck,
+  "wind policies": P.wind,
+  "worker's compensation": P.workers,
+  "workplace violence": P.alert,
+  // legacy commercial aliases
+  "commercial auto": P.car,
+  "business owners policy (bop)": P.briefcase,
+  "workers compensation": P.workers,
   "professional liability": P.liability,
   "cyber & privacy liability": P.cyber,
-  "commercial package": P.package,
   "farm owners": P.farm,
-  "commercial fire": P.fire,
   "business interruption": P.interruption,
-  "employment practices liability": P.gavel,
   "surety bonds": P.badge,
   "builders risk": P.hammer,
   // personal
-  homeowners: P.home,
+  "small farm/ranch": P.farm,
+  "personal inland marine": P.package,
   "personal auto": P.car,
-  renters: P.key,
-  condo: P.building,
-  flood: P.water,
-  "personal umbrella": P.umbrella,
-  "pet insurance": P.paw,
   "dwelling fire": P.fire,
+  homeowners: P.home,
+  "mobile homeowners": P.home,
   "recreational vehicles": P.rv,
+  motorcycle: P.motorcycle,
+  renters: P.key,
+  yacht: P.ship,
+  "personal umbrella": P.umbrella,
+  flood: P.water,
+  watercraft: P.boat,
+  condominium: P.building,
+  "personal & premises liability": P.liability,
+  "pet insurance": P.paw,
+  "roadside assistance": P.cone,
+  "home protection": P.shield,
+  // legacy personal aliases
+  "home insurance": P.home,
+  "auto insurance": P.car,
+  condo: P.building,
   // life
+  annuity: P.coins,
+  life: P.heart,
   "term life": P.clockP,
   "whole life": P.heart,
   "universal life": P.infinity,
@@ -111,10 +195,14 @@ function policyIcon(name) {
   return POLICY_ICONS[name.toLowerCase()] || ICONS.check;
 }
 
-/* ---------- Brand markup (nav + footer) ---------- */
-function brandMarkup() {
-  if (AGENT.logo) {
-    return `<img src="${AGENT.logo}" alt="${AGENT.name}" class="brand-logo">`;
+/* ---------- Brand markup (nav + footer) ----------
+   Pass "footer" to use AGENT.logoFooter when one is set — the footer sits on
+   --primary, so it takes a variant without the dark "Insurance Agency" line. */
+function brandMarkup(placement) {
+  const logo =
+    (placement === "footer" && AGENT.logoFooter) || AGENT.logo;
+  if (logo) {
+    return `<img src="${logo}" alt="${AGENT.agency || AGENT.name} logo" class="brand-logo">`;
   }
   // AGENT.brand.bold rendered bold + AGENT.brand.light rendered light (Policygenius-style)
   const b = AGENT.brand || { bold: AGENT.name, light: "" };
@@ -247,7 +335,7 @@ function buildFooter() {
   footer.innerHTML = `
     <div class="wrap footer__grid">
       <div class="footer__brand-col">
-        <a href="index.html" class="footer__brand">${brandMarkup()}</a>
+        <a href="index.html" class="footer__brand">${brandMarkup("footer")}</a>
         <p class="footer__tagline">${AGENT.title}</p>
         ${socialRow}
       </div>
@@ -407,14 +495,18 @@ function initAbout() {
     photoEl.innerHTML = `<img src="${AGENT.photo}" alt="${AGENT.name}, ${AGENT.title} in ${AGENT.location}">`;
   }
 
-  /* Info cards */
+  /* Info cards — same trust stats as the home stats band (AGENT.stats),
+     falling back to values derived from the config when stats is unset. */
   const info = document.getElementById("about-info");
   if (info) {
-    const cards = [
-      { num: `${AGENT.experience}+`, label: "years experienced" },
-      { num: `${AGENT.carriers.length}`, label: "carrier partners" },
-      { num: `${AGENT.states.length}`, label: "states licensed" },
-    ];
+    const cards =
+      AGENT.stats && AGENT.stats.length
+        ? AGENT.stats.map((s) => ({ num: s.value, label: s.label }))
+        : [
+            { num: `${AGENT.experience}+`, label: "years experienced" },
+            { num: `${AGENT.carriers.length}`, label: "carrier partners" },
+            { num: `${AGENT.states.length}`, label: "states licensed" },
+          ];
     info.innerHTML = cards
       .map(
         (c) => `<div class="info-card">
@@ -722,6 +814,8 @@ function initReveal() {
     ".about-hero__bio",
     ".stats-band__title",
     ".stats-band__subtitle",
+    ".mission-vision__title",
+    ".mission-vision__body",
     ".service-block__title",
     ".service-block__lead",
     ".bottom-cta__title",
@@ -735,7 +829,9 @@ function initReveal() {
   });
 
   /* 2. Every other element — smooth slide up, staggered 120ms among the
-        elements that scroll into view together. */
+        elements that scroll into view together. Large batches (the 52-item
+        commercial policy grid) cap the total cascade so the section doesn't
+        sit half-empty for seconds. */
   const otherSelectors = [
     ".about-hero__label",
     ".about-hero__photo",
@@ -771,7 +867,8 @@ function initReveal() {
         opacity: 1,
         duration: 0.6,
         ease: "power2.out",
-        stagger: 0.12,
+        // 120ms apart normally; compressed to fit 0.6s once the batch is big.
+        stagger: batch.length * 0.12 <= 0.6 ? 0.12 : { amount: 0.6 },
       }),
   });
 

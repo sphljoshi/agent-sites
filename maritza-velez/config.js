@@ -11,12 +11,12 @@ const AGENT = {
   copyright: "Value Care Insurance Agency LLC",
   title: "Licensed Commercial, Personal & Life Insurance Producer",
   specialty: "Commercial, Personal & Life Insurance",
-  heroTitle: "Coverage chosen for you.",
+  heroTitle: "Protect Your Future Today",
   tagline:
     "Independent coverage for Florida businesses, families, and everything you have worked to build — placed across 21 states with 13 years of experience behind it.",
-  // About-page intro — keep this short (40–50 words).
+  // About-page intro. Blank lines (\n\n) split it into separate <p> elements.
   bio:
-    "Value Care Insurance Agency is a Florida-based independent agency serving individuals, families, and businesses. Founder Maritza Velez brings 13 years as a licensed producer and active licenses in 21 states, shopping multiple top-rated carriers to build coverage around how you actually live and operate.",
+    "Value Care Insurance Agency is a Florida-based independent agency serving individuals, families, and businesses. Founder Maritza Velez brings 13 years as a licensed producer and active licenses in 21 states, shopping multiple top-rated carriers to build coverage around how you actually live and operate.\n\nWhat We Do At Value Care Insurance Agency, we are a leading agency providing and offering a wide range of coverage options, including health, auto, home, and commercial insurance. Our team of experienced professionals is dedicated to helping our clients find the perfect insurance plan to meet their unique needs. With a focus on value and customer satisfaction, we strive to deliver exceptional service and tailored solutions to protect what matters most.",
   experience: "13",
   photo: "images/maritza-velez.webp", // stats band (home) + about-page portrait
   heroImage: "hero/hero-image.webp", // full-width hero background
@@ -27,14 +27,18 @@ const AGENT = {
   phoneHref: "tel:+14074944983",
   email: "info@valuecareinsurance.com",
   website: "https://www.valuecareinsurance.com",
-  location: "Orlando, FL",
-  address: "Orlando, Florida",
+  location: "Plantation, FL", // short form — page titles, alt text
+  address: "4716 NW 6th Court, Plantation, FL 33317", // full — footer + contact card
   social: {
     facebook: "https://www.facebook.com/VALUECAREINSAGENCY/",
     linkedin: "https://www.linkedin.com/in/valuecareinsurance/",
     twitter: null,
   },
-  logo: null, // null → text brand fallback
+  // Circular badge on a transparent background, used in the nav.
+  logo: "logo/value-care-insurance-logo.png",
+  // Footer variant — drops the near-black "Insurance Agency" line, which is
+  // unreadable against the --primary footer. Falls back to `logo` if null.
+  logoFooter: "logo/vc-logo-footer.png",
 
   hours: [
     { days: "Monday – Friday", time: "9:00 AM – 5:00 PM" },
@@ -82,16 +86,18 @@ const AGENT = {
     },
   ],
 
+  // IBLF quote links. "#" renders as a same-tab, non-external link — swap in the
+  // real URL when personal insurance gets its own form.
   quoteLinks: {
-    commercial: "#",
+    commercial: "https://aght.us/daf5b597",
     personal: "#",
-    life: "#",
+    life: "https://aght.us/61e80611",
   },
 
   stats: [
-    { value: "13+", label: "years of experience" },
-    { value: "21", label: "states licensed" },
-    { value: "80+", label: "carrier partners" },
+    { value: "34K+", label: "Success Stories" },
+    { value: "210+", label: "Professional Team" },
+    { value: "35K+", label: "Worldwide Clients" },
   ],
 
   services: {
@@ -102,18 +108,58 @@ const AGENT = {
       description:
         "Our specialty. Whether you run a crew of three or a fleet of thirty, we place the general liability, workers' compensation, and property coverage your contracts and your lenders actually require — and we read the exclusions with you before you sign.",
       items: [
-        "General Liability",
-        "Workers Compensation",
-        "Business Owners Policy (BOP)",
-        "Commercial Property",
-        "Commercial Auto",
-        "Commercial Umbrella",
-        "Professional Liability",
-        "Cyber & Privacy Liability",
+        "Accountants Professional",
+        "Agricultural Output Program",
+        "Agriculture Liability",
+        "Agriculture Package",
+        "Agriculture Property",
+        "Agriculture Scheduled & Unscheduled Personal Property",
+        "Architects Professional",
+        "Artisans",
+        "Aviation",
+        "BOP Liability",
+        "BOP Property",
+        "Boiler And Machinery",
+        "Business Automobile",
+        "Business Owners",
+        "Commercial Cyber And Privacy Liability",
+        "Commercial Fire",
+        "Commercial Inland Marine",
+        "Commercial Output Program",
         "Commercial Package",
+        "Commercial Property",
+        "Commercial Umbrella",
+        "Crime",
+        "Directors And Officers",
+        "Earthquake",
+        "Employers Liability",
         "Employment Practices Liability",
-        "Surety Bonds",
-        "Builders Risk",
+        "Equine Liability",
+        "Errors And Omissions",
+        "Excess Liability",
+        "Fiduciary",
+        "Garage And Dealers",
+        "General Liability",
+        "Installation / Builders Risk",
+        "Kidnap and Ransom",
+        "Lawyers Professional",
+        "Liquor Liability",
+        "Livestock Mortality",
+        "Media Professional",
+        "Medical Professional Liability",
+        "Miscellaneous Professional Liability",
+        "Motor Carrier",
+        "Motor Truck Cargo",
+        "Ocean Marine",
+        "Physicians And Surgeons",
+        "Railroad Protective Liability",
+        "Special Event",
+        "Special Multi-Peril",
+        "Surety",
+        "Truckers",
+        "Wind Policies",
+        "Worker's Compensation",
+        "Workplace Violence",
       ],
     },
     personal: {
@@ -121,17 +167,26 @@ const AGENT = {
       eyebrow: "For your home & everyday life",
       image: "images/personal-overlay.webp",
       description:
-        "Florida homes carry risks that generic policies handle badly — wind, water, and rising replacement costs. We compare carriers on the coverage that matters, not just the premium, and cover the cars, the RV, and the dog while we're at it.",
+        "Florida homes carry risks that generic policies handle badly — wind, water, and rising replacement costs. We compare carriers on the coverage that matters, not just the premium, and bring the same scrutiny to the cars, boats, bikes, and everything else you insure.",
       items: [
-        "Homeowners",
+        "Small Farm/Ranch",
+        "Personal Inland Marine",
         "Personal Auto",
-        "Renters",
-        "Condo",
-        "Flood",
-        "Personal Umbrella",
-        "Pet Insurance",
         "Dwelling Fire",
+        "Homeowners",
+        "Mobile Homeowners",
         "Recreational Vehicles",
+        "Motorcycle",
+        "Renters",
+        "Yacht",
+        "Personal Umbrella",
+        "Flood",
+        "Watercraft",
+        "Condominium",
+        "Personal & Premises Liability",
+        "Pet Insurance",
+        "Roadside Assistance",
+        "Home Protection",
       ],
     },
     life: {
@@ -141,13 +196,14 @@ const AGENT = {
       description:
         "Term, whole, universal, and disability coverage explained without the sales script. We show you what each option costs over time, what it pays out, and which one fits the obligation you're actually trying to cover.",
       items: [
-        "Term Life",
-        "Whole Life",
-        "Universal Life",
-        "Variable Life",
-        "Annuities",
+        "Annuity",
+        "Life",
         "Long-Term Disability",
         "Short-Term Disability",
+        "Term Life",
+        "Universal Life",
+        "Variable Life",
+        "Whole Life",
       ],
     },
   },
