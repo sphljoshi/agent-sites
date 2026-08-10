@@ -8,7 +8,7 @@ const AGENT = {
   title: "Founder & Licensed Insurance Advisor",
   brand: { bold: "Everbe", light: "Insurance" }, // nav/footer text brand (used when logo is null)
   copyright: "Everbe Insurance", // footer © line
-  specialty: "Personal, Commercial & Life Insurance", // <title> keyword phrase
+  specialty: "Personal, Commercial, Life & Health Insurance", // <title> keyword phrase
   // Hero title rule: max 40 characters of visible text, two lines.
   heroTitle:
     'Protecting Your Health,<br>Wealth &amp; <span class="emphasis">Legacy</span>.',
@@ -20,7 +20,7 @@ const AGENT = {
   bio:
     "Everbe Insurance was founded to help today’s consumers protect what matters most, build financial security, and thrive at every stage of life. Our team is committed to providing personalized, unbiased insurance solutions tailored to each client’s unique needs. Unlike many insurance platforms, we are not affiliated with a single carrier, allowing us to focus on what is best for you, your family, and your community.\n\nCeranes Lejulus, founder of Everbe Insurance, is a Licensed Insurance Advisor with more than 15 years of industry experience serving seniors, families, and business owners. Licensed in multiple states, he brings extensive knowledge and expertise to help clients navigate a wide range of insurance and financial protection needs.\n\nAs an independent agent, Ceranes partners with leading national and regional insurance carriers, ensuring that every recommendation is based on the best interests of his clients rather than the priorities of any one insurance company. His broad network of carrier relationships allows him to provide customized coverage options and competitive solutions tailored to individual circumstances.\n\nCeranes is also a member of the National Sales Network (NSN), a nationwide organization of professionals dedicated to collaboration, client advocacy, and industry excellence. Through these relationships, Everbe Insurance remains well-positioned to deliver exceptional service and access to a diverse range of insurance products and solutions.",
   experience: "15",
-  photo: "images/about-us-hero.webp",
+  photo: "images/ceranes-lejulus-profile.webp",
   heroImage: "hero-image.jpg", // kept for compatibility — NOT rendered in v3
   // Hero media slider — when set, overrides the per-service images.
   heroSlides: [
@@ -86,7 +86,7 @@ const AGENT = {
     },
     {
       q: "What types of insurance do you offer?",
-      a: "I offer a comprehensive range of commercial, personal, and life insurance solutions. Whether you need protection for your business, or your personal assets, or your family, I can help you find the right policies through trusted providers.",
+      a: "I offer a comprehensive range of commercial, personal, life and health insurance solutions. Whether you need protection for your business, your personal assets, your family or your health, I can help you find the right policies through trusted providers.",
     },
     {
       q: "How long have you been an insurance agent?",
@@ -106,6 +106,8 @@ const AGENT = {
     personal: "https://aght.us/670d8dc7",
     commercial: "https://aght.us/405e899b",
     life: "https://aght.us/f170ebc5",
+    // Health shares the personal-lines IBLF intake form.
+    health: "https://aght.us/670d8dc7",
   },
 
   stats: [
@@ -140,18 +142,6 @@ const AGENT = {
         "Home Protection",
         "Pet Insurance",
         "Roadside Assistance",
-        // Health, Medicare & supplemental
-        "Medicare Advantage",
-        "Medicare Supplement",
-        "Prescription Drug",
-        "Dental Plans",
-        "Vision Plans",
-        "Hearing Plans",
-        "Individual / Family Plans",
-        "Final Expense Insurance",
-        "Critical Illness",
-        "Hospital Indemnity Insurance",
-        "Annuities",
       ],
     },
     commercial: {
@@ -228,6 +218,28 @@ const AGENT = {
       cardDescription:
         "Term, whole, universal and variable life solutions that protect your family's future.",
       items: ["Term Life", "Whole Life", "Universal Life", "Variable Life", "Life"],
+    },
+    health: {
+      label: "Health Insurance",
+      eyebrow: "For your health and wellbeing",
+      image: "hero/slides/slide-2.webp",
+      description:
+        "Medicare, individual and family health plans, plus the supplemental coverage that fills the gaps — dental, vision, hearing, critical illness and more. Guidance through every enrollment decision, with no pressure.",
+      cardDescription:
+        "Medicare, individual and family plans, plus dental, vision and supplemental coverage.",
+      items: [
+        "Medicare Advantage",
+        "Medicare Supplement",
+        "Prescription Drug",
+        "Dental Plans",
+        "Vision Plans",
+        "Hearing Plans",
+        "Individual / Family Plans",
+        "Final Expense Insurance",
+        "Critical Illness",
+        "Hospital Indemnity Insurance",
+        "Annuities",
+      ],
     },
   },
 };

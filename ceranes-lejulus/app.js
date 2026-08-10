@@ -37,6 +37,7 @@ const SERVICE_ICONS = {
   personal: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>',
   commercial: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><line x1="9" y1="9" x2="9" y2="9.01"/><line x1="9" y1="12" x2="9" y2="12.01"/><line x1="9" y1="15" x2="9" y2="15.01"/></svg>',
   life: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>',
+  health: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.3.3 0 1 0 .2.3"/><path d="M8 15v1a6 6 0 0 0 6 6a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>',
 };
 
 /* ---------- Icon layer 3: one per individual policy ---------- */
@@ -190,6 +191,16 @@ function brandMarkup(inverse) {
 /* ---------- Service helpers ---------- */
 function serviceKeys() {
   return Object.keys(AGENT.services);
+}
+/* Quote CTAs open the carrier portal in a new tab, but mailto:/tel: links must
+   stay in-page — target="_blank" on those leaves a stranded blank tab behind. */
+function quoteTarget(link) {
+  return link && link !== "#" && !/^(mailto|tel):/i.test(link)
+    ? ' target="_blank" rel="noopener"'
+    : "";
+}
+function isMailLink(link) {
+  return /^mailto:/i.test(link || "");
 }
 function serviceLabelShort(key) {
   // "Commercial Insurance" -> "Commercial"
@@ -421,7 +432,7 @@ function initHome() {
         const s = AGENT.services[k];
         const v = variants[i % variants.length];
         const link = AGENT.quoteLinks[k] || "#";
-        const target = link && link !== "#" ? ' target="_blank" rel="noopener"' : "";
+        const target = quoteTarget(link);
         return `<a class="plan-card plan-card--${v}" href="${link}"${target}>
           <span class="plan-card__tag">Coverage</span>
           <h3 class="plan-card__name">${s.label}</h3>
@@ -569,7 +580,7 @@ function initServices() {
   const renderBlock = (k) => {
     const s = AGENT.services[k];
     const link = AGENT.quoteLinks[k] || "#";
-    const target = link && link !== "#" ? ' target="_blank" rel="noopener"' : "";
+    const target = quoteTarget(link);
     const items = s.items
       .map(
         (it) => `<div class="policy-card">
@@ -582,7 +593,9 @@ function initServices() {
         <div class="service-block__head">
           <h2 class="service-block__title">${s.label}</h2>
           <p class="service-block__lead">${s.description}</p>
-          <a class="btn-accent service-block__cta" href="${link}"${target}>Get a Quote ${ICONS.arrow}</a>
+          <a class="btn-accent service-block__cta" href="${link}"${target}>${
+      isMailLink(link) ? "Email Us for a Quote" : "Get a Quote"
+    } ${ICONS.arrow}</a>
         </div>
         <div class="policy-grid">${items}</div>
       </section>`;
@@ -636,13 +649,15 @@ function initContact() {
     const renderPanel = (k) => {
       const s = AGENT.services[k];
       const link = AGENT.quoteLinks[k] || "#";
-      const target = link && link !== "#" ? ' target="_blank" rel="noopener"' : "";
+      const target = quoteTarget(link);
+      const short = serviceLabelShort(k).toLowerCase();
+      const cta = isMailLink(link)
+        ? `Email us for a ${short} quote`
+        : `Request a free ${short} quote`;
       panel.innerHTML = `
         <h3 class="quote-panel__title">${s.label}</h3>
         <p class="quote-panel__desc">${s.description}</p>
-        <a class="btn-accent quote-panel__cta" href="${link}"${target}>Request a free ${serviceLabelShort(
-        k
-      ).toLowerCase()} quote ${ICONS.arrow}</a>
+        <a class="btn-accent quote-panel__cta" href="${link}"${target}>${cta} ${ICONS.arrow}</a>
         <p class="quote-panel__note">Free consultation with no obligation. ${AGENT.firstName} responds promptly.</p>`;
     };
     renderPanel(keys[0]);
