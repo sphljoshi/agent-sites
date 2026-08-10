@@ -86,11 +86,10 @@ const AGENT = {
     },
   ],
 
-  // IBLF quote links. "#" renders as a same-tab, non-external link — swap in the
-  // real URL when personal insurance gets its own form.
+  // IBLF quote links.
   quoteLinks: {
     commercial: "https://aght.us/daf5b597",
-    personal: "#",
+    personal: "https://aght.us/0959acde",
     life: "https://aght.us/61e80611",
   },
 
