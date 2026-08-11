@@ -3,8 +3,8 @@
    Edit this file (and swap the images) to retarget the site.
    ============================================================= */
 const AGENT = {
-  name: "Maritza Velez",
-  firstName: "Maritza",
+  name: "Marisa Velez",
+  firstName: "Marisa",
   agency: "Value Care Insurance Agency",
   // Text brand shown in the nav/footer while AGENT.logo is null.
   brand: { bold: "Value Care", light: "Insurance" },
@@ -16,7 +16,7 @@ const AGENT = {
     "Independent coverage for Florida businesses, families, and everything you have worked to build — placed across 21 states with 13 years of experience behind it.",
   // About-page intro. Blank lines (\n\n) split it into separate <p> elements.
   bio:
-    "Value Care Insurance Agency is a Florida-based independent agency serving individuals, families, and businesses. Founder Maritza Velez brings 13 years as a licensed producer and active licenses in 21 states, shopping multiple top-rated carriers to build coverage around how you actually live and operate.\n\nWhat We Do At Value Care Insurance Agency, we are a leading agency providing and offering a wide range of coverage options, including health, auto, home, and commercial insurance. Our team of experienced professionals is dedicated to helping our clients find the perfect insurance plan to meet their unique needs. With a focus on value and customer satisfaction, we strive to deliver exceptional service and tailored solutions to protect what matters most.",
+    "Value Care Insurance Agency is a Florida-based independent agency serving individuals, families, and businesses. Founder Marisa Velez brings 13 years as a licensed producer and active licenses in 21 states, shopping multiple top-rated carriers to build coverage around how you actually live and operate.\n\nWhat We Do At Value Care Insurance Agency, we are a leading agency providing and offering a wide range of coverage options, including health, auto, home, and commercial insurance. Our team of experienced professionals is dedicated to helping our clients find the perfect insurance plan to meet their unique needs. With a focus on value and customer satisfaction, we strive to deliver exceptional service and tailored solutions to protect what matters most.",
   experience: "13",
   photo: "images/maritza-velez.webp", // stats band (home) + about-page portrait
   heroImage: "hero/hero-image.webp", // full-width hero background
@@ -25,10 +25,10 @@ const AGENT = {
   ctaImage: "images/cta-image.webp",
   phone: "(407) 494-4983",
   phoneHref: "tel:+14074944983",
-  email: "info@valuecareinsurance.com",
+  email: "mvelez@valuecareinsurance.com",
   website: "https://www.valuecareinsurance.com",
-  location: "Plantation, FL", // short form — page titles, alt text
-  address: "4716 NW 6th Court, Plantation, FL 33317", // full — footer + contact card
+  location: "Orlando, FL", // short form — page titles, alt text
+  address: "37 N Orange Ave Ste 223, Orlando, FL 32801", // full — footer + contact card
   social: {
     facebook: "https://www.facebook.com/VALUECAREINSAGENCY/",
     linkedin: "https://www.linkedin.com/in/valuecareinsurance/",
