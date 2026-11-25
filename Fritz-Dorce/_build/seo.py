@@ -30,7 +30,7 @@ PAGES = {  # file: (path, priority)
     "about.html": ("/about", "0.8"),
     "contact.html": ("/contact", "0.8"),
 }
-OG_IMG = f"{SITE}/og-image.jpg?v=2"
+OG_IMG = f"{SITE}/og-image.jpg?v=3"
 
 
 def strip(t):
@@ -48,7 +48,7 @@ def sub(s, pat, rep, count=1, flags=re.S):
 # ------------------------------------------------------------------ shared nodes
 address = {"@type": "PostalAddress", "addressLocality": "Cooper City", "addressRegion": "FL",
            "postalCode": "33330", "addressCountry": "US"}
-logo = {"@type": "ImageObject", "@id": f"{SITE}/#logo", "url": f"{SITE}/itd-insurance-delivers-logo.png?v=2", "width": 456, "height": 96,
+logo = {"@type": "ImageObject", "@id": f"{SITE}/#logo", "url": f"{SITE}/itd-insurance-delivers-logo.png?v=3", "width": 456, "height": 96,
         "caption": BRAND}
 photo = {"@type": "ImageObject", "@id": f"{SITE}/#fritz-photo", "url": f"{SITE}/{A['photo']}", "width": 820,
          "height": 1092, "caption": f"{NAME}, {A['title']}"}
@@ -233,7 +233,7 @@ nf = f'''<!DOCTYPE html>
   <body>
     <nav class="nav" id="nav">
       <div class="nav__inner wrap">
-        <a href="/" class="nav__brand"><img src="itd-insurance-delivers-logo.png?v=2" width="456" height="96" alt="{BRAND}" class="brand-logo"></a>
+        <a href="/" class="nav__brand"><img src="itd-insurance-delivers-logo.png?v=3" width="456" height="96" alt="{BRAND}" class="brand-logo"></a>
         <div class="nav__links" id="nav-links">
           <a href="/" class="nav__link">Home</a>
           <a href="/about" class="nav__link">About</a>

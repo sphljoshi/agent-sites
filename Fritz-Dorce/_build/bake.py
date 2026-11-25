@@ -41,7 +41,7 @@ faq_node = {"@type": "FAQPage", "mainEntity": [
     {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": strip(f["a"])}} for f in A["faqs"]]}
 agency = {"@type": "InsuranceAgency", "@id": "#agency", "name": f"{BRAND} — {NAME}",
           "description": "Independent insurance agency offering life, personal and commercial insurance across Florida, Georgia and Texas.",
-          "telephone": TEL, "email": A["email"], "logo": "itd-insurance-delivers-logo.png?v=2", "image": A["photo"], "address": addr(),
+          "telephone": TEL, "email": A["email"], "logo": "itd-insurance-delivers-logo.png?v=3", "image": A["photo"], "address": addr(),
           "areaServed": STATES_FULL, "openingHoursSpecification": HOURS,
           "sameAs": ["https://agents.agencyheight.com/insurance/fritz-dorce", "https://insurancethatworksflorida.com/", "https://www.facebook.com/share/18YEEStvtj/", "https://www.instagram.com/fritzdorce"],
           "employee": {"@type": "Person", "name": NAME, "jobTitle": A["title"], "knowsAbout": KNOWS}}
@@ -87,7 +87,7 @@ s = head(s, f"{NAME} | {TITLE_SPEC} in {LOC}",
          f"{NAME} of {BRAND}: licensed independent agent in {LOC} for life, home, auto and business insurance in FL, GA &amp; TX. Free quotes.",
          {"@context": "https://schema.org", "@graph": [home_agency, faq_node]})
 s = sub(s, r'<a href="index.html" class="nav__brand">.*?</a>',
-        f'<a href="index.html" class="nav__brand"><img src="itd-insurance-delivers-logo.png?v=2" alt="{BRAND}" class="brand-logo"></a>')
+        f'<a href="index.html" class="nav__brand"><img src="itd-insurance-delivers-logo.png?v=3" alt="{BRAND}" class="brand-logo"></a>')
 s = sub(s, r'<span class="hero__badge">.*?</span>', f'<span class="hero__badge">{BRAND} · Licensed in FL, GA &amp; TX</span>')
 s = sub(s, r'<h1 class="hero__title" id="hero-title">.*?</h1>', '<h1 class="hero__title" id="hero-title">Insurance that delivers for South Florida.</h1>')
 s = sub(s, r'<p class="hero__subtitle" id="hero-subtitle">.*?</p>',
